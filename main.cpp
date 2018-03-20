@@ -74,7 +74,7 @@ void callback(u_char* handle, const struct pcap_pkthdr* header, const u_char* pa
   printf("[Dst IP address] : %s\n",inet_ntoa(iph -> ip_dst));
 
   // TCP header
-  packet += 20; //(iph -> ip_hl * 4);		// packet length (total lenght -> 5 * 4 = 20)
+  packet += 20; //(iph -> ip_hl * 4);		// packet length (total length -> 5 * 4 = 20)
   tcph = (struct tcphdr *)packet;
   printf("================ TCP ================\n");
   printf("[Src Port] : %d\n" , ntohs(tcph -> th_sport));	//ntohs() -> network to host type : short
